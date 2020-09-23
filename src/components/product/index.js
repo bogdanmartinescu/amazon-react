@@ -1,26 +1,21 @@
 import React from 'react';
+import Button from '../button';
 // import assets
-import ImagePlaceholder from '../../assets/81-QB7nDh4L.jpg';
+// import ImagePlaceholder from '../../assets/81-QB7nDh4L.jpg';
 // import styled components
-import {
-    ProductContainer,
-    ProductTitle,
-    ProductPrice,
-    ProductRating,
-    ProductImage,
-    ProductAddToCart
-} from './ProductStyles';
+import { ProductContainer, ProductTitle, ProductPrice, ProductImage } from './ProductStyles';
 
-function Product({ Title, Image }) {
-    return (
-        <ProductContainer>
-            <ProductTitle>The Lean Startup</ProductTitle>
-            <ProductPrice><small>$</small> <strong>11.99</strong></ProductPrice>
-            <ProductRating></ProductRating>
-            <ProductImage src={Image || ImagePlaceholder}></ProductImage>
-            <ProductAddToCart>Add To Cart</ProductAddToCart>
-        </ProductContainer>
-    )
+function Product({ title, image, price }) {
+	return (
+		<ProductContainer>
+			<ProductTitle>{title}</ProductTitle>
+			<ProductPrice>
+				<small>$</small> <strong>{price}</strong>
+			</ProductPrice>
+			<ProductImage src={image}></ProductImage>
+			<Button color="yellow">Add to Cart</Button>
+		</ProductContainer>
+	);
 }
 
 export default Product;

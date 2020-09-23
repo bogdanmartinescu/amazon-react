@@ -11,7 +11,8 @@ body {
 
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@import url(//db.onlinewebfonts.com/c/157c6cc36dd65b1b2adc9e7f3329c761?family=Amazon+Ember);
+
+h1, h2, h3, h4, h5, h6 {
+    text-rendering: optimizeLegibility;
 }
