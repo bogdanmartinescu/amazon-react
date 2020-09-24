@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-export const ButtonWrapper = styled.span`
+export const ButtonWrapper = styled.a`
 	color: #111;
 	border-radius: 3px;
 	border-style: solid;
@@ -13,7 +13,7 @@ export const ButtonWrapper = styled.span`
 	vertical-align: middle;
 
 	${(props) =>
-		props.color === 'yellow'
+		props.type === 'primary'
 			? css`
 					background: #f0c14b;
 					border-color: #a88734 #9c7e31 #846a29;

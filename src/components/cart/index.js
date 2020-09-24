@@ -2,11 +2,13 @@ import React from 'react';
 import CurrencyFormat from 'react-currency-format';
 import Button from '../button';
 // import styles
-import { CartWrapper } from './CartStyles';
+import { CartWrapper, CartGift } from './CartStyles';
+import { useStateValue } from '../../provider';
 
 function Cart() {
-	const basket = [];
-	const getBasketTotal = () => {};
+	const [{ basket }] = useStateValue();
+
+	const getBasketTotal = () => basket.reduce((subtotal, item) => (subtotal += item.price), 0);
 
 	return (
 		<CartWrapper>
@@ -14,22 +16,22 @@ function Cart() {
 				renderText={(value) => (
 					<React.Fragment>
 						<p>
-							Subtotal ({basket.length}) items: <strong>0</strong>
+							Subtotal ({basket.length}) items: <strong>{value}</strong>
 						</p>
 
-						<small className="subtotal__gift">
+						<CartGift>
 							<input type="checkbox" /> <span>This order contains a gift.</span>
-						</small>
+						</CartGift>
 					</React.Fragment>
 				)}
 				decimalScale={2}
 				// value={getBasketTotal(basket)}
-				value={0}
+				value={getBasketTotal()}
 				displayType={'text'}
 				thousandSeparator={true}
 				prefix={'$'}
 			/>
-			<Button color="yellow" fluid={true}>
+			<Button type="primary" fluid={true}>
 				Proceed to Checkout
 			</Button>
 		</CartWrapper>

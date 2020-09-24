@@ -8,7 +8,7 @@ export const HeaderWrapper = styled.div`
 	position: sticky;
 	top: 0;
 	z-index: 100;
-	width: 100vw;
+	width: 100%;
 `;
 
 export const HeaderLogo = styled.img`

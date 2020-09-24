@@ -1,12 +1,11 @@
 import React from 'react';
-
 import { ButtonWrapper, ButtonInner, ButtonText } from './ButtonStyles';
 
-function Button({ children, color, fluid }) {
+function Button({ children, type, fluid, fn }) {
 	return (
-		<ButtonWrapper color={color} fluid={fluid}>
+		<ButtonWrapper type={type} fluid={fluid} fn={fn}>
 			<ButtonInner>
-				<ButtonText>{children}</ButtonText>
+				<ButtonText onClick={() => (fn ? fn() : null)}>{children}</ButtonText>
 			</ButtonInner>
 		</ButtonWrapper>
 	);

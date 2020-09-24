@@ -5,10 +5,13 @@ import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 import Logo from '../../assets/logo.png';
 
 import { Link } from 'react-router-dom';
+import { useStateValue } from '../../provider';
 // import styled components
 import { HeaderWrapper, HeaderNav, HeaderOption, HeaderOptionTop, HeaderOptionBottom, HeaderOptionBasket, HeaderBasketCount, HeaderLogo, HeaderSearch, HeaderSearchInput, HeaderSearchIcon } from './HeaderStyles';
 
 function Header() {
+	const [{ basket }, dispatch] = useStateValue();
+
 	return (
 		<HeaderWrapper>
 			<Link to="/">
@@ -42,7 +45,7 @@ function Header() {
 					<HeaderOptionBasket>
 						<ShoppingBasketIcon />
 						<HeaderOptionBottom>
-							<HeaderBasketCount>0</HeaderBasketCount>
+							<HeaderBasketCount>{basket?.length}</HeaderBasketCount>
 						</HeaderOptionBottom>
 					</HeaderOptionBasket>
 				</Link>

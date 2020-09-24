@@ -1,11 +1,24 @@
 import React from 'react';
 import Button from '../button';
-// import assets
-// import ImagePlaceholder from '../../assets/81-QB7nDh4L.jpg';
+import { useStateValue } from '../../provider';
 // import styled components
 import { ProductContainer, ProductTitle, ProductPrice, ProductImage } from './ProductStyles';
 
-function Product({ title, image, price }) {
+function Product({ id, title, image, price }) {
+	const [{ basket }, dispatch] = useStateValue();
+
+	const addToBasket = () => {
+		dispatch({
+			type: 'ADD_TO_BASKET',
+			payload: {
+				id,
+				title,
+				image,
+				price
+			}
+		});
+	};
+
 	return (
 		<ProductContainer>
 			<ProductTitle>{title}</ProductTitle>
@@ -13,7 +26,9 @@ function Product({ title, image, price }) {
 				<small>$</small> <strong>{price}</strong>
 			</ProductPrice>
 			<ProductImage src={image}></ProductImage>
-			<Button color="yellow">Add to Cart</Button>
+			<Button type="primary" fn={addToBasket}>
+				Add to Cart
+			</Button>
 		</ProductContainer>
 	);
 }

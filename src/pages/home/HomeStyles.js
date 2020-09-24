@@ -5,7 +5,7 @@ export const HomeContainer = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	max-width: 1500px;
-	width: 1500px;
+
 	margin: 0 auto;
 `;
 

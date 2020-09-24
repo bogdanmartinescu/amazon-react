@@ -15,13 +15,13 @@ export const CartWrapper = styled.div`
 	small {
 		margin: 10px 0;
 	}
+`;
 
-	.subtotal__gift {
-		display: flex;
-		align-items: center;
-	}
+export const CartGift = styled.small`
+	display: flex;
+	align-items: center;
 
-	.input[type='checkbox'] {
-		margin-right: 10px;
+	input[type='checkbox'] {
+		margin-right: 5px;
 	}
 `;
