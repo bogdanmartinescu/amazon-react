@@ -1,6 +1,16 @@
-<?xml version="1.0"?><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="none" stroke="#323232" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M80.24 61.203H30.392l-6.623-38.61h65.882z"/><path fill="none" stroke="#323232" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M30.392 61.203L18.889 73.752"/><path fill="none" stroke="#323232" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M18.889 73.752H90"/><path fill="none" stroke="#323232" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M23.769 22.593l-5.839-9.027"/><path fill="none" stroke="#323232" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M17.93 13.566H10"/><circle cx="30.981" cy="80.093" r="6.341" fill="none" stroke="#323232" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/><circle cx="76.995" cy="80.093" r="6.341" fill="none" stroke="#323232" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/><metadata xmlns:d="https://loading.io/stock/">
-<d:name>shopping cart</d:name>
-<d:tags>shopping cart,checkout,purchase,payment,buy,subscribe,spend,sale,trolley,handbarrow</d:tags>
-<d:license>by</d:license>
-<d:slug>4tk536</d:slug>
-</metadata></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="39px" height="27px" viewBox="0 0 39 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(0.007812, 0.610840)" fill="#FFFFFF">
+            <circle id="Oval" cx="15.4888" cy="23.2640686" r="2.5617981"></circle>
+            <circle id="Oval" cx="28.3450012" cy="23.6234436" r="2.5617981"></circle>
+            <rect id="Rectangle" x="0" y="0" width="8" height="3"></rect>
+            <rect id="Rectangle" transform="translate(11.583774, 9.082613) rotate(63.000000) translate(-11.583774, -9.082613) " x="2.40917026" y="7.08261284" width="18.3492076" height="4"></rect>
+            <rect id="Rectangle" transform="translate(22.521116, 17.207728) rotate(-1.000000) translate(-22.521116, -17.207728) " x="13.7621138" y="15.2077285" width="17.5180049" height="4"></rect>
+            <path d="M34.1731652,5 L38.4605583,5 L38.6499122,5.10068129 L31.6793034,18.2104898 L28.147513,16.3326036 L34.1731652,5 Z" id="Combined-Shape"></path>
+        </g>
+    </g>
+</svg>

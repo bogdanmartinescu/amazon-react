@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled, { css } from "styled-components";
 
 export const ButtonWrapper = styled.a`
 	color: #111;
@@ -13,8 +13,8 @@ export const ButtonWrapper = styled.a`
 	vertical-align: middle;
 
 	${(props) =>
-		props.type === 'primary'
-			? css`
+  props.type === "primary"
+    ? css`
 					background: #f0c14b;
 					border-color: #a88734 #9c7e31 #846a29;
 
@@ -22,7 +22,7 @@ export const ButtonWrapper = styled.a`
 						background: darken(#f0c14b, 10%) !important;
 					}
 			  `
-			: css`
+    : css`
 					background: #e7e9ec;
 					border-color: #adb1b8 #a2a6ac #8d9096;
 
@@ -32,8 +32,8 @@ export const ButtonWrapper = styled.a`
 			  `}
 
 	${(props) =>
-		props.fluid &&
-		css`
+  props.fluid &&
+  css`
 			width: 100%;
 		`}
 `;
@@ -49,11 +49,23 @@ export const ButtonText = styled.span`
 	border: 0;
 	display: block;
 	font-size: 13px;
-	// font-weight: 800;
-	line-height: 30px;
 	margin: 0;
 	outline: 0;
-	padding: 0 15px 0 15px;
 	text-align: center;
 	white-space: nowrap;
+
+	&:hover {
+		background: darken(#e7e9ec, 10%) !important;
+	}
+
+	${(props) =>
+  props.size === "large"
+    ? css`
+		padding: 10px 25px;
+		line-height: 36px;
+	`
+    : css`
+		padding: 0 15px;
+		line-height: 30px;
+	`}
 `;

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const CheckoutPage = styled.div`
 	display: flex;
@@ -27,3 +27,7 @@ export const CheckoutTitle = styled.h2`
 	border-bottom: 1px solid lightgrey;
 `;
 export const CheckoutCart = styled.h2``;
+
+export const CheckoutProductsContainer = styled.div`
+	padding: 20px 10px;
+`;

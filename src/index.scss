@@ -2,16 +2,18 @@
   margin: 0;
 }
 
+@font-face {
+  font-family: "Amazon Ember";
+  src: local('Amazon Ember'), url(./assets/fonts/157c6cc36dd65b1b2adc9e7f3329c761.ttf) format('truetype');
+}
+
 body {
   margin: 0;
   font-family: "Amazon Ember", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #EAEDED;
-
 }
-
-@import url(//db.onlinewebfonts.com/c/157c6cc36dd65b1b2adc9e7f3329c761?family=Amazon+Ember);
 
 h1, h2, h3, h4, h5, h6 {
     text-rendering: optimizeLegibility;

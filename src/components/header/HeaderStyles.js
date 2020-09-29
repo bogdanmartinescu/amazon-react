@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const HeaderWrapper = styled.div`
 	height: 60px;
@@ -61,6 +61,10 @@ export const HeaderNav = styled.div`
 	display: flex;
 	justify-content: space-evenly;
 	// flex: .15;
+
+	a {
+		text-decoration: none;
+	}
 `;
 
 export const HeaderOption = styled.div`
@@ -68,6 +72,7 @@ export const HeaderOption = styled.div`
 	flex-direction: column;
 	margin: 0 10px;
 	color: #fff;
+	text-decoration: none;
 `;
 
 export const HeaderOptionTop = styled.span`
