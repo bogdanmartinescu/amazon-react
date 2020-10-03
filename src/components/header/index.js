@@ -2,8 +2,6 @@ import React from "react";
 // import assets
 import SearchIcon from "@material-ui/icons/Search";
 import HeaderCart from "../header-cart";
-// import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
-// import { ReactComponent as CartIcon } from "../../assets/cart.svg";
 import Logo from "../../assets/logo.png";
 // import link
 import { Link } from "react-router-dom";
@@ -18,7 +16,6 @@ import {
 	HeaderOptionTop,
 	HeaderOptionBottom,
 	HeaderOptionBasket,
-	// HeaderBasketCount,
 	HeaderLogo,
 	HeaderSearch,
 	HeaderSearchInput,
@@ -29,11 +26,10 @@ function Header() {
 	const [{ basket, user }] = useStateValue();
 
 	const handleAuthentication = () => {
-		if (user && user.email) {
-			console.log(user);
-			auth.signOut();
-		}
+		if (user?.email) auth.signOut();
 	};
+
+	const createUsernameFromEmail = (email) => email.split("@")[0];
 
 	return (
 		<HeaderWrapper>
@@ -52,7 +48,10 @@ function Header() {
 				<Link to="/signin">
 					<HeaderOption>
 						<HeaderOptionTop>
-							Hello, {user && user.email ? user.email : "Guest"}
+							Hello,{" "}
+							{user && user.email
+								? createUsernameFromEmail(user.email)
+								: "Guest"}
 						</HeaderOptionTop>
 						<HeaderOptionBottom onClick={() => handleAuthentication()}>
 							{user && user.email ? "Sign Out" : "Sign In"}

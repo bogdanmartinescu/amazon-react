@@ -6,10 +6,10 @@ import "./index.scss";
 import App from "./app/App";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <StateProvider initialState={initialState} reducer={reducer}>
-      <App />
-    </StateProvider>
-  </React.StrictMode>,
-  document.getElementById("root"),
+	<React.StrictMode>
+		<StateProvider initialState={initialState} reducer={reducer}>
+			<App />
+		</StateProvider>
+	</React.StrictMode>,
+	document.getElementById("root")
 );

@@ -1,15 +1,18 @@
-import React from 'react';
-import CurrencyFormat from 'react-currency-format';
-import Button from '../button';
+import React from "react";
+import CurrencyFormat from "react-currency-format";
+import { useHistory } from "react-router-dom";
+import Button from "../button";
 // import styles
-import { CartWrapper, CartGift } from './CartStyles';
+import { CartWrapper, CartGift } from "./CartSubtotalStyles";
 // import app state
-import { useStateValue } from '../../provider';
+import { useStateValue } from "../../provider";
 
-function Cart() {
+function CartSubtotal() {
 	const [{ basket }] = useStateValue();
+	const history = useHistory();
 
-	const getBasketTotal = () => basket.reduce((subtotal, item) => (subtotal += item.price), 0);
+	const getBasketTotal = () =>
+		basket.reduce((subtotal, item) => (subtotal += item.price), 0);
 
 	return (
 		<CartWrapper>
@@ -29,15 +32,16 @@ function Cart() {
 				decimalScale={2}
 				// value={getBasketTotal(basket)}
 				value={getBasketTotal()}
-				displayType={'text'}
+				displayType={"text"}
 				thousandSeparator={true}
-				prefix={'$'}
+				prefix={"$"}
 			/>
-			<Button type="primary" fluid={true}>
+
+			<Button type="primary" fluid={true} fn={(e) => history.push("/checkout")}>
 				Proceed to Checkout
 			</Button>
 		</CartWrapper>
 	);
 }
 
-export default Cart;
+export default CartSubtotal;

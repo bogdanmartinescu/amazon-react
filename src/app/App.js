@@ -8,10 +8,11 @@ import { useStateValue } from "../provider";
 import { types } from "../reducer";
 // import pages
 import Home from "../pages/home";
-import Checkout from "../pages/checkout";
 import Orders from "../pages/orders";
 import Prime from "../pages/prime";
 import SignIn from "../pages/sign-in";
+import Cart from "../pages/cart";
+import Checkout from "../pages/checkout";
 // import layout
 import DefaultLayout from "../layouts/default";
 import AuthLayout from "../layouts/auth";
@@ -53,6 +54,12 @@ function App() {
 					</Route>
 
 					<Route path="/cart">
+						<DefaultLayout>
+							<Cart />
+						</DefaultLayout>
+					</Route>
+
+					<Route path="/checkout">
 						<DefaultLayout>
 							<Checkout />
 						</DefaultLayout>
